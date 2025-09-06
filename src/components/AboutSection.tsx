@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, TrendingUp, Award, Users, FileText, ExternalLink } from 'lucide-react';
+import { Brain, Code, Database, TrendingUp, FileText, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 
@@ -59,26 +59,6 @@ const AboutSection: React.FC = () => {
     },
   ];
 
-  const achievements = [
-    {
-      icon: Award,
-      title: "PhD in Computer Science",
-      subtitle: "Stanford University, 2020",
-      description: "Specialized in Deep Learning and Computer Vision",
-    },
-    {
-      icon: Users,
-      title: "Senior Data Scientist",
-      subtitle: "TechCorp Inc., 2020-Present",
-      description: "Leading ML initiatives and mentoring junior data scientists",
-    },
-    {
-      icon: Brain,
-      title: "Research Publications",
-      subtitle: "15+ Papers Published",
-      description: "Top-tier conferences: NeurIPS, ICML, ICLR",
-    },
-  ];
 
   return (
     <section id="about" className="min-h-screen py-20 bg-gradient-to-b from-background to-secondary/10 flex items-center">
@@ -221,30 +201,6 @@ const AboutSection: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">
-                Key Achievements
-              </h3>
-              <div className="space-y-4">
-                {achievements.map((achievement, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-start space-x-4 p-4 rounded-xl glass-card hover-lift"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="flex-shrink-0">
-                      <achievement.icon className={`h-6 w-6 ${achievement.icon === Award ? 'text-ai-cyan' : achievement.icon === Users ? 'text-ai-purple' : 'text-ai-teal'}`} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">{achievement.title}</h4>
-                      <p className="text-sm text-ai-cyan font-medium">{achievement.subtitle}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{achievement.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right Column - Expertise Areas */}

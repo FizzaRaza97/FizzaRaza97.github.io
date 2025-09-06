@@ -72,14 +72,6 @@ const ContactSection: React.FC = () => {
       description: "Connect with me professionally",
       color: "hover:text-blue-400",
     },
-    {
-      icon: FileText,
-      name: "Google Scholar",
-      username: "Fizza Raza",
-      url: "https://scholar.google.com/citations?user=fizzazafar",
-      description: "Browse my research publications",
-      color: "hover:text-blue-600",
-    },
   ];
 
   const quickActions = [
