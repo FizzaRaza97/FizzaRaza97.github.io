@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, BookOpen, Users } from 'lucide-react';
+import { GraduationCap, Award, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 const EducationSection: React.FC = () => {
