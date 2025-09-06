@@ -38,7 +38,7 @@ const ProjectsSection: React.FC = () => {
       icon: Brain,
       color: "border-ai-cyan",
       bgColor: "bg-ai-cyan/10",
-      github: "https://github.com/username/medical-ai",
+      github: "https://github.com/fizzazafar/medical-ai",
       demo: "https://demo.example.com",
       impact: "94% accuracy, 70% faster diagnosis",
       metrics: [
@@ -56,7 +56,7 @@ const ProjectsSection: React.FC = () => {
       icon: TrendingUp,
       color: "border-ai-purple",
       bgColor: "bg-ai-purple/10",
-      github: "https://github.com/username/fraud-detection",
+      github: "https://github.com/fizzazafar/fraud-detection",
       demo: "https://demo.example.com",
       impact: "99.2% precision, <10ms latency",
       metrics: [
@@ -74,7 +74,7 @@ const ProjectsSection: React.FC = () => {
       icon: Users,
       color: "border-ai-teal",
       bgColor: "bg-ai-teal/10",
-      github: "https://github.com/username/churn-prediction",
+      github: "https://github.com/fizzazafar/churn-prediction",
       demo: "https://demo.example.com",
       impact: "25% churn reduction, $2M+ saved",
       metrics: [
@@ -92,7 +92,7 @@ const ProjectsSection: React.FC = () => {
       icon: Database,
       color: "border-ai-pink",
       bgColor: "bg-ai-pink/10",
-      github: "https://github.com/username/data-pipeline",
+      github: "https://github.com/fizzazafar/data-pipeline",
       demo: "https://demo.example.com",
       impact: "10TB+ daily processing, 99.9% uptime",
       metrics: [
@@ -107,21 +107,21 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Attention-Based Neural Networks for Medical Image Segmentation",
       conference: "NeurIPS 2023",
-      authors: "Smith, J., Johnson, A., et al.",
+      authors: "Zafar, F., Johnson, A., et al.",
       description: "Novel attention mechanism improving segmentation accuracy by 15%",
       link: "https://arxiv.org/abs/2023.12345",
     },
     {
       title: "Federated Learning for Privacy-Preserving Healthcare Analytics",
       conference: "ICML 2023",
-      authors: "Smith, J., Brown, K., et al.",
+      authors: "Zafar, F., Brown, K., et al.",
       description: "Framework enabling collaborative ML without data sharing",
       link: "https://arxiv.org/abs/2023.67890",
     },
     {
       title: "Real-time Anomaly Detection in Streaming Data",
       conference: "KDD 2022",
-      authors: "Smith, J., Davis, M., et al.",
+      authors: "Zafar, F., Davis, M., et al.",
       description: "Lightweight model achieving 99.5% accuracy with <5ms latency",
       link: "https://arxiv.org/abs/2022.11111",
     },
