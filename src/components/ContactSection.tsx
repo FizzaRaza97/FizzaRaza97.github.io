@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, FileText, MapPin, Phone, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, MapPin, Calendar } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 
@@ -32,24 +32,16 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "fizza.zafar@email.com",
-      link: "mailto:fizza.zafar@email.com",
+      value: "fizza.zafar97@gmail.com",
+      link: "mailto:fizza.zafar97@gmail.com",
       color: "text-ai-cyan",
       bgColor: "bg-ai-cyan/10",
     },
     {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
-      color: "text-ai-purple",
-      bgColor: "bg-ai-purple/10",
-    },
-    {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      link: "https://maps.google.com/?q=San+Francisco,+CA",
+      value: "St Louis, Missouri, United States",
+      link: "https://maps.google.com/?q=St+Louis,+Missouri,+United+States",
       color: "text-ai-teal",
       bgColor: "bg-ai-teal/10",
     },
@@ -59,8 +51,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Github,
       name: "GitHub",
-      username: "@fizzazafar",
-      url: "https://github.com/fizzazafar",
+      username: "Fizza Raza",
+      url: 'https://github.com/FizzaRaza97',
       description: "View my code repositories and projects",
       color: "hover:text-gray-400",
     },

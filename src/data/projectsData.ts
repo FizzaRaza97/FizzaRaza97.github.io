@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Brain, Database, TrendingUp, Users, Satellite, BarChart3, Video } from 'lucide-react';
+import { Brain, Satellite, BarChart3, Video } from 'lucide-react';
 
 export interface ProjectItem {
   title: string;

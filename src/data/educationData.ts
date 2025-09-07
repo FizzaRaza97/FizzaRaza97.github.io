@@ -4,7 +4,6 @@ export interface EducationItem {
   degree: string;
   institution: string;
   year: string;
-  gpa: string;
   specialization: string;
   description: string;
   achievements: string[];
@@ -19,7 +18,6 @@ export const education: EducationItem[] = [
     degree: "Computer Science Masters (General Computer Science)",
     institution: "Swiss Federal Institute of Technology (ETH) Zurich",
     year: "September 2019 - April 2021",
-    gpa: "3.64/6.00",
     specialization: "General Computer Science",
     description: "Comprehensive master's program covering advanced computer science topics including algorithms, systems, and theoretical foundations. Focused on developing strong analytical and problem-solving skills.",
     achievements: [
@@ -44,7 +42,6 @@ export const education: EducationItem[] = [
     degree: "Bachelor of Science in Computer Science",
     institution: "Lahore University of Management Sciences (LUMS)",
     year: "September 2015 - June 2019",
-    gpa: "3.98/4.00",
     specialization: "Computer Science",
     description: "Strong foundation in computer science fundamentals with focus on software development, algorithms, and system design. Consistently maintained excellent academic performance throughout the program.",
     achievements: [
@@ -71,7 +68,6 @@ export const education: EducationItem[] = [
     degree: "GCE Cambridge International Advanced Level",
     institution: "Lahore Grammar School",
     year: "August 2013 - June 2015",
-    gpa: "4A*s",
     specialization: "Physics, Chemistry, Mathematics, Economics",
     description: "Completed A-levels with distinction in all subjects, demonstrating strong analytical and mathematical skills across multiple disciplines.",
     achievements: [

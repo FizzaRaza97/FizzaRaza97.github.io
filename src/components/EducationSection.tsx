@@ -73,9 +73,6 @@ const EducationSection: React.FC = () => {
                       <span className="text-sm font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                         {edu.year}
                       </span>
-                      <div className="text-sm text-ai-cyan font-medium mt-1">
-                        GPA: {edu.gpa}
-                      </div>
                     </div>
                   </div>
                   <CardTitle className="text-2xl font-semibold mb-2">
