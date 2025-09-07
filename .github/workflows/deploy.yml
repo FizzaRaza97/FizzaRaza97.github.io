@@ -1,8 +1,8 @@
 name: Build and Deploy Vite site to GitHub Pages
 
 on:
-  push:
-    branches: ["master"]   # 👈 deploy whenever you push to master
+  pull_request:
+    branches: ["master"]   # 👈 build on PRs targeting master
   workflow_dispatch:       # allow manual trigger
 
 permissions:
