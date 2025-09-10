@@ -44,7 +44,7 @@ const ProjectsSection: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            Projects & Research
+            Projects
           </motion.h2>
           <motion.p
             variants={itemVariants}
