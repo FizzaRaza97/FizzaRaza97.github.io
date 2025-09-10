@@ -135,6 +135,7 @@ const HeroSection: React.FC = () => {
             size="lg"
             variant="ai"
             className="group hover:scale-105 transition-transform duration-300"
+            onClick={() => window.open('/resume.pdf', '_blank')}
           >
             <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
             Download Resume
@@ -143,6 +144,7 @@ const HeroSection: React.FC = () => {
             size="lg"
             variant="outline"
             className="group hover:scale-105 transition-transform duration-300 glow-border"
+            onClick={() => window.open('https://github.com/FizzaRaza97', '_blank')}
           >
             <ExternalLink className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
             View Projects
