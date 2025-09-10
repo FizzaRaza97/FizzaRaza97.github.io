@@ -169,43 +169,25 @@ const AboutSection: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left Column - Story */}
+        <div className="space-y-16 mb-20">
+          {/* First Row - Story */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
+            className="text-center"
           >
-            <motion.div variants={itemVariants} className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">
-                My Journey in Data Science
-              </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  With over 5 years of experience in data science and AI, I've dedicated my career
-                  to unlocking the potential of data through machine learning and advanced analytics.
-                  My journey began with a fascination for pattern recognition and has evolved into
-                  a passion for building intelligent systems.
-                </p>
-                <p>
-                  I hold a PhD in Computer Science from Stanford University, where I specialized
-                  in deep learning and computer vision. My research focused on developing novel
-                  neural network architectures for medical image analysis, resulting in several
-                  publications in top-tier conferences.
-                </p>
-                <p>
-                  Currently, I work as a Senior Data Scientist at TechCorp Inc., where I lead
-                  machine learning initiatives and mentor junior data scientists. I've successfully
-                  deployed over 50 ML models in production, impacting millions of users and
-                  generating significant business value.
+            <motion.div variants={itemVariants}>
+              <div className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                <p className="text-lg">
+                  A self-motivated AI researcher & computer scientist with expertise in machine learning, systems research, looking to add value in the agile AI & ML research and tech space.
                 </p>
               </div>
             </motion.div>
-
           </motion.div>
 
-          {/* Right Column - Expertise Areas */}
+          {/* Second Row - Expertise Areas */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -214,7 +196,7 @@ const AboutSection: React.FC = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-2xl font-semibold mb-8 text-foreground"
+              className="text-2xl font-semibold mb-8 text-foreground text-center"
             >
               Core Expertise
             </motion.h3>
