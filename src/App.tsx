@@ -3,6 +3,7 @@ import AboutSection from './components/AboutSection';
 import EducationSection from './components/EducationSection';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
+import AwardsSection from './components/AwardsSection';
 import ContactSection from './components/ContactSection';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <EducationSection />
         <ProjectsSection />
         <SkillsSection />
+        <AwardsSection />
         <ContactSection />
       </main>
     </div>
