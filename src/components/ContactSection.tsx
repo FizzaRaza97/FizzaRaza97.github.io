@@ -32,8 +32,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "fizza.zafar97@gmail.com",
-      link: "mailto:fizza.zafar97@gmail.com",
+      value: "fizza.raza97@gmail.com",
+      link: "mailto:fizza.raza97@gmail.com",
       color: "text-ai-cyan",
       bgColor: "bg-ai-cyan/10",
     },
