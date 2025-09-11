@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
           >
             <motion.h1
               variants={itemVariants}
@@ -121,7 +121,7 @@ const AboutSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
             className="flex justify-center lg:justify-end"
           >
             <motion.div
@@ -175,7 +175,7 @@ const AboutSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
             className="text-center"
           >
             <motion.div variants={itemVariants}>
@@ -192,7 +192,7 @@ const AboutSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
           >
             <motion.h3
               variants={itemVariants}
@@ -237,7 +237,7 @@ const AboutSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
         >
           {[
             { number: "5+", label: "Years Experience" },

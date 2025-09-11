@@ -1,6 +1,5 @@
 export interface SkillItem {
   name: string;
-  level: number;
   description: string;
 }
 
@@ -42,11 +41,11 @@ export const skillCategories: SkillCategory[] = [
     color: "border-ai-cyan",
     bgColor: "bg-ai-cyan/10",
     skills: [
-      { name: "Python", level: 95, description: "Primary language for ML/AI development and web applications" },
-      { name: "C/C++", level: 90, description: "System programming and performance-critical applications" },
-      { name: "JavaScript", level: 85, description: "Web development and interactive applications" },
-      { name: "Haskell", level: 80, description: "Functional programming and mathematical computations" },
-      { name: "HTML/CSS", level: 85, description: "Frontend web development and styling" },
+      { name: "Python", description: "Primary language for ML/AI development and web applications" },
+      { name: "C/C++", description: "System programming and performance-critical applications" },
+      { name: "JavaScript", description: "Web development and interactive applications" },
+      { name: "Haskell", description: "Functional programming and mathematical computations" },
+      { name: "HTML/CSS", description: "Frontend web development and styling" },
     ],
   },
   {
@@ -54,11 +53,11 @@ export const skillCategories: SkillCategory[] = [
     color: "border-ai-purple",
     bgColor: "bg-ai-purple/10",
     skills: [
-      { name: "Advanced Data Analytics", level: 95, description: "Complex data analysis and insights generation" },
-      { name: "Applied Machine Learning", level: 90, description: "Practical ML implementation and deployment" },
-      { name: "Recommender Systems", level: 90, description: "Collaborative filtering and recommendation algorithms" },
-      { name: "Large Language Models", level: 85, description: "LLM applications and fine-tuning" },
-      { name: "Natural Language Processing", level: 85, description: "Text processing and language models" },
+      { name: "Advanced Data Analytics", description: "Complex data analysis and insights generation" },
+      { name: "Applied Machine Learning", description: "Practical ML implementation and deployment" },
+      { name: "Recommender Systems", description: "Collaborative filtering and recommendation algorithms" },
+      { name: "Large Language Models", description: "LLM applications and fine-tuning" },
+      { name: "Natural Language Processing", description: "Text processing and language models" },
     ],
   },
   {
@@ -66,13 +65,13 @@ export const skillCategories: SkillCategory[] = [
     color: "border-ai-teal",
     bgColor: "bg-ai-teal/10",
     skills: [
-      { name: "Algorithm Design", level: 95, description: "Design and analysis of efficient algorithms" },
-      { name: "Django", level: 90, description: "Python web framework for rapid development" },
-      { name: "Flask", level: 85, description: "Lightweight Python web framework" },
-      { name: "WordPress", level: 80, description: "Content management and web development" },
-      { name: "Version Control", level: 90, description: "Git and collaborative development practices" },
-      { name: "System & Solution Design", level: 90, description: "Architecture design and technical solutions" },
-      { name: "Deployment", level: 85, description: "Application deployment and DevOps practices" },
+      { name: "Algorithm Design", description: "Design and analysis of efficient algorithms" },
+      { name: "Django", description: "Python web framework for rapid development" },
+      { name: "Flask", description: "Lightweight Python web framework" },
+      { name: "WordPress", description: "Content management and web development" },
+      { name: "Version Control", description: "Git and collaborative development practices" },
+      { name: "System & Solution Design", description: "Architecture design and technical solutions" },
+      { name: "Deployment", description: "Application deployment and DevOps practices" },
     ],
   },
   {
@@ -80,10 +79,10 @@ export const skillCategories: SkillCategory[] = [
     color: "border-ai-pink",
     bgColor: "bg-ai-pink/10",
     skills: [
-      { name: "Network Emulation", level: 90, description: "Network simulation and performance analysis" },
-      { name: "Systems Measurement", level: 90, description: "Performance evaluation and benchmarking" },
-      { name: "Web App Development", level: 85, description: "Full-stack web application development" },
-      { name: "Product Delivery", level: 90, description: "End-to-end product development and delivery" },
+      { name: "Network Emulation", description: "Network simulation and performance analysis" },
+      { name: "Systems Measurement", description: "Performance evaluation and benchmarking" },
+      { name: "Web App Development", description: "Full-stack web application development" },
+      { name: "Product Delivery", description: "End-to-end product development and delivery" },
     ],
   },
 ];

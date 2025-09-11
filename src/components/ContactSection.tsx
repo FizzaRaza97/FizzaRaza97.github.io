@@ -32,8 +32,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "fizza.zafar97@gmail.com",
-      link: "mailto:fizza.zafar97@gmail.com",
+      value: "fizza.raza97@gmail.com",
+      link: "mailto:fizza.raza97@gmail.com",
       color: "text-ai-cyan",
       bgColor: "bg-ai-cyan/10",
     },
@@ -95,7 +95,7 @@ const ContactSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
         >
           <motion.h2
             variants={itemVariants}
@@ -118,7 +118,7 @@ const ContactSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
           >
             <motion.h3
               variants={itemVariants}
@@ -203,7 +203,7 @@ const ContactSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.05 }}
           >
             <motion.h3
               variants={itemVariants}

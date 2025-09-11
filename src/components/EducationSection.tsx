@@ -36,7 +36,7 @@ const EducationSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
         >
           <motion.h2
             variants={itemVariants}
@@ -61,7 +61,7 @@ const EducationSection: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.05 }}
             >
               <Card className={`glass-card hover-lift ${edu.color} border-2`}>
                 <CardHeader>
