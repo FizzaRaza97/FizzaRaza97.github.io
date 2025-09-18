@@ -230,33 +230,6 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom Stats */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-        >
-          {[
-            { number: "5+", label: "Years Experience" },
-            { number: "50+", label: "ML Models Deployed" },
-            { number: "15+", label: "Research Papers" },
-            { number: "10+", label: "Team Members Led" },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="text-center p-6 rounded-2xl glass-card hover-lift"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="text-3xl font-bold gradient-text mb-2">{stat.number}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
