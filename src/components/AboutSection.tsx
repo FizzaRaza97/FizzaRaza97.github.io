@@ -1,10 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Code, Database, TrendingUp, FileText, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
+import { roleTexts } from '../data/aboutData';
 
 const AboutSection: React.FC = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [textIndex, setTextIndex] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const currentText = roleTexts[textIndex];
+    const shouldDelete = isDeleting;
+    const currentLength = displayText.length;
+
+    const handleTyping = () => {
+      if (!shouldDelete && currentLength < currentText.length) {
+        setDisplayText(currentText.slice(0, currentLength + 1));
+        setTypingSpeed(150);
+      } else if (shouldDelete && currentLength > 0) {
+        setDisplayText(currentText.slice(0, currentLength - 1));
+        setTypingSpeed(50);
+      } else if (!shouldDelete && currentLength === currentText.length) {
+        setTypingSpeed(1500);
+        setIsDeleting(true);
+      } else if (shouldDelete && currentLength === 0) {
+        setIsDeleting(false);
+        setTextIndex((textIndex + 1) % roleTexts.length);
+        setTypingSpeed(1000);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, textIndex, typingSpeed]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -80,9 +121,12 @@ const AboutSection: React.FC = () => {
             </motion.h1>
             <motion.h2
               variants={itemVariants}
-              className="text-3xl md:text-5xl font-semibold mb-4 text-foreground/90"
+              className="text-3xl md:text-5xl font-semibold mb-4 gradient-text"
             >
-              Data Scientist & AI Engineer
+              <div className="animated-text">
+                {displayText}
+                <span className={`cursor ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+              </div>
             </motion.h2>
             <motion.p
               variants={itemVariants}
