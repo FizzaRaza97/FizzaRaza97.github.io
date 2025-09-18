@@ -103,7 +103,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <section id="about" className="min-h-screen py-20 bg-gradient-to-b from-background to-secondary/10 flex items-center">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Column - Hero Content */}
           <motion.div

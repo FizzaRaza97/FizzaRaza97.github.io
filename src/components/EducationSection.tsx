@@ -30,7 +30,7 @@ const EducationSection: React.FC = () => {
 
   return (
     <section id="education" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           variants={containerVariants}
