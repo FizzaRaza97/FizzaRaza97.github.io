@@ -12,9 +12,9 @@ function App() {
       <Navigation />
       <main>
         <AboutSection />
-        <EducationSection />
         <ProjectsSection />
         <SkillsSection />
+        <EducationSection />
         <AwardsSection />
         <ContactSection />
       </main>
