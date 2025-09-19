@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, FileText, MapPin, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, MapPin } from 'lucide-react';
 
 export interface ContactInfo {
   icon: typeof Mail;
@@ -69,14 +69,5 @@ export const quickActions: QuickAction[] = [
       // In a real app, this would download the actual resume
       window.open('/resume.pdf', '_blank');
     },
-  },
-  {
-    title: "Schedule Meeting",
-    description: "Book a time to discuss opportunities",
-    icon: Calendar,
-    action: () => {
-      // In a real app, this would open a calendar booking link
-      window.open('https://calendly.com/fizzazafar', '_blank');
-    },
-  },
+  }
 ];

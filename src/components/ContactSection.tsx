@@ -43,15 +43,102 @@ const ContactSection: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            Get In Touch
+            GET IN TOUCH
           </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-          >
-            I'm always interested in discussing new opportunities, collaborations,
-            or just having a conversation about data science and AI. Let's connect!
-          </motion.p>
+        </motion.div>
+
+        {/* Availability Status */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          className="mb-16"
+        >
+          <motion.div variants={itemVariants} className="w-full">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-ai-cyan/10 via-ai-purple/5 to-ai-teal/10 border border-ai-cyan/20 hover:border-ai-cyan/40 transition-all duration-500 group">
+              {/* Animated Background Pattern */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 translate-x-[-100%] transition-transform duration-1000 ease-out"></div>
+              </div>
+
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-ai-cyan via-ai-purple to-ai-teal rounded-2xl opacity-0 blur transition-opacity duration-500"></div>
+
+              <div className="relative z-10 p-8 md:p-12">
+                <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
+                  {/* Left Side - Status & Message */}
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start mb-4">
+                      <div className="relative">
+                        <div className="w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
+                        <div className="absolute inset-0 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-ping opacity-75"></div>
+                      </div>
+                      <span className="ml-3 text-xl md:text-2xl font-bold bg-gradient-to-r from-ai-cyan to-ai-purple bg-clip-text text-transparent">
+                        Open for Opportunities
+                      </span>
+                    </div>
+                    <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                      Ready to collaborate on exciting projects in AI, machine learning, and data science.
+                      Let's build something amazing together!
+                    </p>
+                  </div>
+
+                  {/* Right Side - Quick Actions */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button
+                      size="lg"
+                      variant="ai"
+                      className="group hover:scale-105 transition-all duration-300 min-w-[140px]"
+                      onClick={() => window.open('mailto:your-email@example.com', '_blank')}
+                    >
+                      <svg className="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Send Message
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="group hover:scale-105 transition-all duration-300 glow-border min-w-[140px]"
+                      onClick={() => window.open('/resume.pdf', '_blank')}
+                    >
+                      <svg className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      View Resume
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Bottom Stats */}
+                <div className="mt-8 pt-6 border-t border-ai-cyan/20">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    {[
+                      { label: "Response Time", value: "< 24hrs" },
+                      { label: "Availability", value: "Immediate" },
+                      { label: "Preferred", value: "Remote" },
+                      { label: "Status", value: "Active" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        className="group"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <div className="text-lg font-bold text-foreground transition-colors duration-300">
+                          {stat.value}
+                        </div>
+                        <div className="text-sm text-muted-foreground uppercase tracking-wide">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -74,7 +161,7 @@ const ContactSection: React.FC = () => {
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 rounded-xl bg-secondary/50">
-                          <info.icon className="h-6 w-6 text-muted-foreground group-hover:text-ai-cyan transition-colors duration-300" />
+                          <info.icon className="h-6 w-6 text-muted-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
@@ -154,7 +241,7 @@ const ContactSection: React.FC = () => {
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 rounded-xl bg-secondary/50">
-                          <social.icon className="h-6 w-6 text-muted-foreground group-hover:text-ai-cyan transition-colors duration-300" />
+                          <social.icon className="h-6 w-6 text-muted-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-foreground mb-1">{social.name}</h4>
@@ -175,24 +262,6 @@ const ContactSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Availability Status */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-12"
-            >
-              <Card className="glass-card glow-border">
-                <CardContent className="p-6 text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-                    <span className="text-lg font-semibold text-foreground">Available for Opportunities</span>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Currently open to new projects, collaborations, and full-time opportunities
-                    in data science and AI engineering.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
           </motion.div>
         </div>
       </div>

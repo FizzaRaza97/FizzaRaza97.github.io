@@ -193,8 +193,8 @@ const AboutSection: React.FC = () => {
             className="text-center"
           >
             <motion.div variants={itemVariants}>
-              <div className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                <p className="text-lg">
+              <div className="text-muted-foreground leading-relaxed max-w-6xl mx-auto">
+                <p className="text-2xl">
                   A self-motivated AI researcher & computer scientist with expertise in machine learning, systems research, looking to add value in the agile AI & ML research and tech space.
                 </p>
               </div>
@@ -210,12 +210,9 @@ const AboutSection: React.FC = () => {
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
               <h3 className="text-4xl font-bold mb-4 gradient-text">
-                Core Expertise
+                CORE EXPERTISE
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-ai-cyan to-ai-purple mx-auto rounded-full"></div>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                Transforming complex data into intelligent solutions through cutting-edge AI and machine learning technologies
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -258,25 +255,15 @@ const AboutSection: React.FC = () => {
 
                         {/* Content */}
                         <div className="space-y-3">
-                          <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors duration-300">
+                          <h4 className="text-2xl font-bold text-foreground transition-colors duration-300">
                             {area.title}
                           </h4>
-                          <p className="text-muted-foreground leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                          <p className="text-muted-foreground leading-relaxed transition-colors duration-300">
                             {area.description}
                           </p>
                         </div>
-
-                        {/* Decorative Elements */}
-                        <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          <div className="w-2 h-2 bg-ai-cyan rounded-full animate-pulse"></div>
-                          <div className="w-2 h-2 bg-ai-purple rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-2 h-2 bg-ai-teal rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
                       </div>
                     </CardContent>
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-ai-cyan/10 via-transparent to-ai-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   </Card>
                 </motion.div>
               ))}

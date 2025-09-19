@@ -42,11 +42,11 @@ const EducationSection: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            Education
+            EDUCATION
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="text-2xl text-muted-foreground max-w-6xl mx-auto leading-relaxed"
           >
             Strong academic foundation in computer science with international experience,
             demonstrating excellence across multiple educational levels and institutions.

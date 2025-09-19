@@ -75,11 +75,11 @@ const AwardsSection: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            Awards & Accomplishments
+            AWARDS & ACCOMPLISHMENTS
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="text-2xl text-muted-foreground mx-auto max-w-6xl leading-relaxed"
           >
             Recognition for academic excellence, research achievements, and outstanding performance
             throughout my educational and professional journey.
