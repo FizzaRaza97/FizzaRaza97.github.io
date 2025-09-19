@@ -62,13 +62,6 @@ const ContactSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.05 }}
           >
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-semibold mb-8 text-foreground"
-            >
-              Contact Information
-            </motion.h3>
-
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -77,21 +70,24 @@ const ContactSection: React.FC = () => {
                   whileHover={{ scale: 1.02, x: 10 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Card className="glass-card hover-lift cursor-pointer group">
+                  <Card className="glass-card hover-lift group glow-border">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
-                        <div className={`p-3 rounded-xl ${info.bgColor}`}>
-                          <info.icon className={`h-6 w-6 ${info.color}`} />
+                        <div className="p-3 rounded-xl bg-secondary/50">
+                          <info.icon className="h-6 w-6 text-muted-foreground group-hover:text-ai-cyan transition-colors duration-300" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
-                          <a
-                            href={info.link}
-                            className="text-muted-foreground hover:text-ai-cyan transition-colors duration-300"
-                          >
-                            {info.value}
-                          </a>
+                          <p className="text-sm text-muted-foreground">{info.value}</p>
                         </div>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="glow-border"
+                          onClick={() => window.open(info.link, '_blank')}
+                        >
+                          {info.title === "Email" ? "Email" : "View on Maps"}
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
@@ -104,8 +100,7 @@ const ContactSection: React.FC = () => {
               variants={itemVariants}
               className="mt-12"
             >
-              <h4 className="text-xl font-semibold mb-6 text-foreground">Quick Actions</h4>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {quickActions.map((action, index) => (
                   <motion.div
                     key={index}
@@ -113,7 +108,7 @@ const ContactSection: React.FC = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Card className="glass-card hover-lift cursor-pointer group">
+                    <Card className="glass-card hover-lift group">
                       <CardContent className="p-4">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
@@ -147,13 +142,6 @@ const ContactSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.05 }}
           >
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-semibold mb-8 text-foreground"
-            >
-              Connect With Me
-            </motion.h3>
-
             <div className="space-y-6">
               {socialLinks.map((social, index) => (
                 <motion.div
@@ -162,7 +150,7 @@ const ContactSection: React.FC = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Card className="glass-card hover-lift cursor-pointer group glow-border">
+                  <Card className="glass-card hover-lift group glow-border">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 rounded-xl bg-secondary/50">
@@ -170,7 +158,6 @@ const ContactSection: React.FC = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-foreground mb-1">{social.name}</h4>
-                          <p className="text-sm text-ai-cyan font-medium mb-1">{social.username}</p>
                           <p className="text-sm text-muted-foreground">{social.description}</p>
                         </div>
                         <Button
