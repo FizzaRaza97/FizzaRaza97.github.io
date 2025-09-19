@@ -1,10 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, TrendingUp, FileText, ExternalLink } from 'lucide-react';
+import { FileText, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
+import { roleTexts, expertiseAreas } from '../data/aboutData';
 
 const AboutSection: React.FC = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [textIndex, setTextIndex] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const currentText = roleTexts[textIndex];
+    const shouldDelete = isDeleting;
+    const currentLength = displayText.length;
+
+    const handleTyping = () => {
+      if (!shouldDelete && currentLength < currentText.length) {
+        setDisplayText(currentText.slice(0, currentLength + 1));
+        setTypingSpeed(150);
+      } else if (shouldDelete && currentLength > 0) {
+        setDisplayText(currentText.slice(0, currentLength - 1));
+        setTypingSpeed(50);
+      } else if (!shouldDelete && currentLength === currentText.length) {
+        setTypingSpeed(1500);
+        setIsDeleting(true);
+      } else if (shouldDelete && currentLength === 0) {
+        setIsDeleting(false);
+        setTextIndex((textIndex + 1) % roleTexts.length);
+        setTypingSpeed(1000);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, textIndex, typingSpeed]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,41 +69,11 @@ const AboutSection: React.FC = () => {
     },
   };
 
-  const expertiseAreas = [
-    {
-      icon: Brain,
-      title: "Machine Learning",
-      description: "Deep learning, neural networks, and advanced ML algorithms",
-      color: "text-ai-cyan",
-      bgColor: "bg-ai-cyan/10",
-    },
-    {
-      icon: Database,
-      title: "Data Engineering",
-      description: "ETL pipelines, data warehousing, and big data processing",
-      color: "text-ai-purple",
-      bgColor: "bg-ai-purple/10",
-    },
-    {
-      icon: Code,
-      title: "AI Development",
-      description: "Building intelligent systems and AI-powered applications",
-      color: "text-ai-teal",
-      bgColor: "bg-ai-teal/10",
-    },
-    {
-      icon: TrendingUp,
-      title: "Analytics",
-      description: "Statistical analysis, predictive modeling, and insights",
-      color: "text-ai-pink",
-      bgColor: "bg-ai-pink/10",
-    },
-  ];
 
 
   return (
     <section id="about" className="min-h-screen py-20 bg-gradient-to-b from-background to-secondary/10 flex items-center">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Column - Hero Content */}
           <motion.div
@@ -80,9 +91,12 @@ const AboutSection: React.FC = () => {
             </motion.h1>
             <motion.h2
               variants={itemVariants}
-              className="text-3xl md:text-5xl font-semibold mb-4 text-foreground/90"
+              className="text-3xl md:text-5xl font-semibold mb-4 gradient-text"
             >
-              Data Scientist & AI Engineer
+              <div className="animated-text">
+                {displayText}
+                <span className={`cursor ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+              </div>
             </motion.h2>
             <motion.p
               variants={itemVariants}
@@ -230,33 +244,6 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom Stats */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-        >
-          {[
-            { number: "5+", label: "Years Experience" },
-            { number: "50+", label: "ML Models Deployed" },
-            { number: "15+", label: "Research Papers" },
-            { number: "10+", label: "Team Members Led" },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="text-center p-6 rounded-2xl glass-card hover-lift"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="text-3xl font-bold gradient-text mb-2">{stat.number}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

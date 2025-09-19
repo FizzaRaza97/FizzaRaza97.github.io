@@ -5,6 +5,8 @@ import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
 import AwardsSection from './components/AwardsSection';
 import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -12,12 +14,14 @@ function App() {
       <Navigation />
       <main>
         <AboutSection />
-        <EducationSection />
         <ProjectsSection />
         <SkillsSection />
+        <EducationSection />
         <AwardsSection />
         <ContactSection />
       </main>
+      <Footer />
+      <BackToTop />
     </div>
   );
 }

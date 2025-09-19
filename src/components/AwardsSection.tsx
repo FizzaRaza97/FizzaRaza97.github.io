@@ -63,7 +63,7 @@ const AwardsSection: React.FC = () => {
 
   return (
     <section id="awards" className="py-20 bg-gradient-to-b from-background to-secondary/10">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           variants={containerVariants}
