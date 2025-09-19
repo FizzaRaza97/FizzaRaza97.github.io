@@ -39,7 +39,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-ai-cyan via-ai-purple to-ai-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-500 via-ai-purple to-ai-teal bg-clip-text text-transparent;
   }
 
   .glass-card {

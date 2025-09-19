@@ -66,7 +66,7 @@ const ContactSection: React.FC = () => {
                         <div className="w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
                         <div className="absolute inset-0 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-ping opacity-75"></div>
                       </div>
-                      <span className="ml-3 text-xl md:text-2xl font-bold bg-gradient-to-r from-ai-cyan to-ai-purple bg-clip-text text-transparent">
+                      <span className="ml-3 text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-600 to-ai-purple bg-clip-text text-transparent">
                         Open for Opportunities
                       </span>
                     </div>

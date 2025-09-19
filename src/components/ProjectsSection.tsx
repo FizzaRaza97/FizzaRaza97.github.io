@@ -108,8 +108,8 @@ const ProjectsSection: React.FC = () => {
                     <div className="grid grid-cols-3 gap-2">
                       {project.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className="text-center p-2 bg-secondary/50 rounded-lg">
-                          <div className="text-sm font-semibold text-ai-cyan">{metric.value}</div>
                           <div className="text-xs text-muted-foreground">{metric.label}</div>
+                          <div className="text-sm font-semibold text-cyan-600">{metric.value}</div>
                         </div>
                       ))}
                     </div>
@@ -118,7 +118,7 @@ const ProjectsSection: React.FC = () => {
                   {/* Impact */}
                   <div className="mb-6 p-3 bg-gradient-to-r from-ai-cyan/10 to-ai-purple/10 rounded-lg">
                     <p className="text-sm font-medium text-foreground">
-                      <span className="text-ai-cyan">Impact:</span> {project.impact}
+                      <span className="text-cyan-600">Impact:</span> {project.impact}
                     </p>
                   </div>
 
