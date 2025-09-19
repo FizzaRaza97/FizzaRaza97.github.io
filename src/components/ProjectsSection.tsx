@@ -29,7 +29,6 @@ const ProjectsSection: React.FC = () => {
     },
   };
 
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-background to-secondary/10">
       <div className="w-full px-6 lg:px-8">
@@ -70,11 +69,11 @@ const ProjectsSection: React.FC = () => {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className={`glass-card hover-lift ${project.color} border-2 h-full`}>
+              <Card className={`glass-card hover-lift border-2 h-full`}>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl ${project.bgColor}`}>
-                      <project.icon className={`h-6 w-6 ${project.color.replace('border-', 'text-')}`} />
+                    <div className={`p-3 rounded-xl bg-ai-purple/10`}>
+                      <project.icon className={`h-6 w-6 text-ai-purple`} />
                     </div>
                     <span className="text-sm font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                       {project.category}

@@ -7,8 +7,6 @@ export interface ProjectItem {
   technologies: string[];
   category: string;
   icon: typeof Brain;
-  color: string;
-  bgColor: string;
   github?: string;
   demo?: string;
   link?: string;
@@ -24,8 +22,6 @@ export const projects: ProjectItem[] = [
     technologies: ["LLM Systems", "Course Design", "AI Education", "Business Applications", "Curriculum Development"],
     category: "Education",
     icon: Brain,
-    color: "border-ai-cyan",
-    bgColor: "bg-ai-cyan/10",
     impact: "Course content for Master of AI students at LUMS",
     metrics: [
       { label: "Duration", value: "Jan 2025 – May 2025" },
@@ -40,8 +36,6 @@ export const projects: ProjectItem[] = [
     technologies: ["Web Development", "Django", "Flask", "Automated Billing", "Database Management", "Healthcare IT"],
     category: "Web Development",
     icon: BarChart3,
-    color: "border-ai-purple",
-    bgColor: "bg-ai-purple/10",
     impact: "Automated healthcare clinic management system",
     metrics: [
       { label: "Duration", value: "Jan 2022 – Present" },
@@ -56,8 +50,6 @@ export const projects: ProjectItem[] = [
     technologies: ["Computer Vision", "YOLOX v4", "Object Detection", "Sports Analytics", "Camera Feed Processing", "Python"],
     category: "Computer Vision",
     icon: Video,
-    color: "border-ai-teal",
-    bgColor: "bg-ai-teal/10",
     impact: "Automated dart scoring for sports analytics",
     metrics: [
       { label: "Duration", value: "Apr 2022 – Dec 2022" },
@@ -72,8 +64,6 @@ export const projects: ProjectItem[] = [
     technologies: ["Python", "Simulation", "Satellite Communication", "Network Analysis", "Data Visualization"],
     category: "Research",
     icon: Satellite,
-    color: "border-ai-pink",
-    bgColor: "bg-ai-pink/10",
     link: "https://www.research-collection.ethz.ch/entities/publication/bda15bc9-a5a5-4cfc-a123-e1214327c5b4",
     impact: "Master's thesis at ETH Zurich, Systems Group",
     metrics: [
@@ -89,8 +79,6 @@ export const projects: ProjectItem[] = [
     technologies: ["Python", "NumPy", "Pandas", "Scikit-learn", "TensorFlow", "Surprise", "Collaborative Filtering"],
     category: "Machine Learning",
     icon: BarChart3,
-    color: "border-ai-cyan",
-    bgColor: "bg-ai-cyan/10",
     github: "https://github.com/FizzaRaza97/Hybrid_NMF",
     impact: "Novel hybrid approach for recommendation systems",
     metrics: [
@@ -106,8 +94,6 @@ export const projects: ProjectItem[] = [
     technologies: ["Video Streaming", "Mobile Optimization", "Performance Analysis", "Teaching", "Data Structures", "Networking"],
     category: "Research & Education",
     icon: Video,
-    color: "border-ai-purple",
-    bgColor: "bg-ai-purple/10",
     impact: "Research and teaching at LUMS",
     metrics: [
       { label: "Duration", value: "June 2017 – June 2019" },

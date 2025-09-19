@@ -56,16 +56,8 @@ const ContactSection: React.FC = () => {
           className="mb-16"
         >
           <motion.div variants={itemVariants} className="w-full">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-ai-cyan/10 via-ai-purple/5 to-ai-teal/10 border border-ai-cyan/20 hover:border-ai-cyan/40 transition-all duration-500 group">
-              {/* Animated Background Pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 translate-x-[-100%] transition-transform duration-1000 ease-out"></div>
-              </div>
-
-              {/* Glow Effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-ai-cyan via-ai-purple to-ai-teal rounded-2xl opacity-0 blur transition-opacity duration-500"></div>
-
-              <div className="relative z-10 p-8 md:p-12">
+            <Card className="glass-card glow-border group">
+              <CardContent className="p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
                   {/* Left Side - Status & Message */}
                   <div className="flex-1 text-center md:text-left">
@@ -136,8 +128,8 @@ const ContactSection: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </motion.div>
 

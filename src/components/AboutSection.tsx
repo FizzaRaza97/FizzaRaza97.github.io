@@ -69,8 +69,6 @@ const AboutSection: React.FC = () => {
     },
   };
 
-
-
   return (
     <section id="about" className="min-h-screen py-20 bg-gradient-to-b from-background to-secondary/10 flex items-center">
       <div className="w-full px-6 lg:px-8">

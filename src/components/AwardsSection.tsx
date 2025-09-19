@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Trophy, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { awards } from '../data/skillsData';
+import { awards } from '../data/awardsData';
 
 const AwardsSection: React.FC = () => {
   const containerVariants = {
@@ -36,28 +36,6 @@ const AwardsSection: React.FC = () => {
         return Trophy;
       default:
         return Award;
-    }
-  };
-
-  const getColor = (category: string) => {
-    switch (category) {
-      case 'Academic Excellence':
-        return 'border-ai-cyan';
-      case 'Academic Achievement':
-        return 'border-ai-purple';
-      default:
-        return 'border-ai-teal';
-    }
-  };
-
-  const getBgColor = (category: string) => {
-    switch (category) {
-      case 'Academic Excellence':
-        return 'bg-ai-cyan/10';
-      case 'Academic Achievement':
-        return 'bg-ai-purple/10';
-      default:
-        return 'bg-ai-teal/10';
     }
   };
 
@@ -95,8 +73,6 @@ const AwardsSection: React.FC = () => {
         >
           {awards.map((award, index) => {
             const IconComponent = getIcon(award.category);
-            const colorClass = getColor(award.category);
-            const bgColorClass = getBgColor(award.category);
 
             return (
               <motion.div
@@ -105,11 +81,11 @@ const AwardsSection: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.2 }}
               >
-                <Card className={`glass-card hover-lift ${colorClass} border-2`}>
+                <Card className={`glass-card hover-lift border-2`}>
                   <CardHeader>
                     <div className="flex items-center space-x-4">
-                      <div className={`p-3 rounded-xl ${bgColorClass}`}>
-                        <IconComponent className={`h-6 w-6 ${colorClass.replace('border-', 'text-')}`} />
+                      <div className={`p-3 rounded-xl bg-ai-purple/10`}>
+                        <IconComponent className={`h-6 w-6 text-ai-purple`} />
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-xl font-semibold text-foreground">
@@ -126,7 +102,7 @@ const AwardsSection: React.FC = () => {
                       {award.description}
                     </p>
                     <div className="mt-4">
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${bgColorClass} ${colorClass.replace('border-', 'text-')}`}>
+                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-ai-purple/10 text-ai-purple')}`}>
                         {award.category}
                       </span>
                     </div>

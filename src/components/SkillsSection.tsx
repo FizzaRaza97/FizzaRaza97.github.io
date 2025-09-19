@@ -27,7 +27,6 @@ const SkillsSection: React.FC = () => {
     },
   };
 
-
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
       <div className="w-full px-6 lg:px-8">
@@ -63,9 +62,9 @@ const SkillsSection: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.05 }}
             >
-              <Card className={`glass-card hover-lift ${category.color} border-2`}>
+              <Card className={`glass-card hover-lift border-2`}>
                 <CardHeader>
-                  <CardTitle className={`text-xl font-semibold ${category.color.replace('border-', 'text-')}`}>
+                  <CardTitle className={`text-xl font-semibold text-ai-purple`}>
                     {category.title}
                   </CardTitle>
                 </CardHeader>
@@ -78,7 +77,7 @@ const SkillsSection: React.FC = () => {
                         className="group p-4 rounded-lg bg-secondary/20 hover:bg-secondary/30 transition-all duration-300 border border-transparent hover:border-secondary/50"
                       >
                         <div className="space-y-2">
-                          <h4 className="font-semibold text-foreground group-hover:text-ai-cyan transition-colors duration-300">
+                          <h4 className="font-semibold text-foreground transition-colors duration-300">
                             {skill.name}
                           </h4>
                           <p className="text-sm text-muted-foreground leading-relaxed">

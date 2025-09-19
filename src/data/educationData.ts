@@ -9,8 +9,6 @@ export interface EducationItem {
   achievements: string[];
   relevantCoursework: string[];
   icon: typeof GraduationCap;
-  color: string;
-  bgColor: string;
 }
 
 export const education: EducationItem[] = [
@@ -34,9 +32,7 @@ export const education: EducationItem[] = [
       "Distributed Systems",
       "Theoretical Computer Science"
     ],
-    icon: GraduationCap,
-    color: "border-ai-cyan",
-    bgColor: "bg-ai-cyan/10",
+    icon: GraduationCap
   },
   {
     degree: "Bachelor of Science in Computer Science",
@@ -60,9 +56,7 @@ export const education: EducationItem[] = [
       "Computer Architecture",
       "Artificial Intelligence"
     ],
-    icon: Award,
-    color: "border-ai-purple",
-    bgColor: "bg-ai-purple/10",
+    icon: Award
   },
   {
     degree: "GCE Cambridge International Advanced Level",
@@ -84,8 +78,6 @@ export const education: EducationItem[] = [
       "Problem Solving",
       "Critical Thinking"
     ],
-    icon: BookOpen,
-    color: "border-ai-teal",
-    bgColor: "bg-ai-teal/10",
+    icon: BookOpen
   },
 ];

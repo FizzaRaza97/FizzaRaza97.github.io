@@ -27,7 +27,6 @@ const EducationSection: React.FC = () => {
     },
   };
 
-
   return (
     <section id="education" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
       <div className="w-full px-6 lg:px-8">
@@ -63,11 +62,11 @@ const EducationSection: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.05 }}
             >
-              <Card className={`glass-card hover-lift ${edu.color} border-2`}>
+              <Card className={`glass-card hover-lift border-2`}>
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl ${edu.bgColor}`}>
-                      <edu.icon className={`h-6 w-6 ${edu.color.replace('border-', 'text-')}`} />
+                    <div className={`p-3 rounded-xl bg-ai-purple/10`}>
+                      <edu.icon className={`h-6 w-6 text-ai-purple`} />
                     </div>
                     <div className="text-right">
                       <span className="text-sm font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
@@ -78,7 +77,7 @@ const EducationSection: React.FC = () => {
                   <CardTitle className="text-2xl font-semibold mb-2">
                     {edu.degree}
                   </CardTitle>
-                  <div className="text-lg text-ai-cyan font-medium mb-2">
+                  <div className="text-lg text-ai-purple font-medium mb-2">
                     {edu.institution}
                   </div>
                   <div className="text-sm text-muted-foreground mb-4">
