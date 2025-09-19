@@ -15,9 +15,9 @@ function App() {
       <main>
         <AboutSection />
         <ProjectsSection />
-        <SkillsSection />
         <EducationSection />
         <AwardsSection />
+        <SkillsSection />
         <ContactSection />
       </main>
       <Footer />
