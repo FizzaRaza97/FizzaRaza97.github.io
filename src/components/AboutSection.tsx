@@ -69,8 +69,6 @@ const AboutSection: React.FC = () => {
     },
   };
 
-
-
   return (
     <section id="about" className="min-h-screen py-20 bg-gradient-to-b from-background to-secondary/10 flex items-center">
       <div className="w-full px-6 lg:px-8">
@@ -193,8 +191,8 @@ const AboutSection: React.FC = () => {
             className="text-center"
           >
             <motion.div variants={itemVariants}>
-              <div className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                <p className="text-lg">
+              <div className="text-muted-foreground leading-relaxed max-w-6xl mx-auto">
+                <p className="text-2xl">
                   A self-motivated AI researcher & computer scientist with expertise in machine learning, systems research, looking to add value in the agile AI & ML research and tech space.
                 </p>
               </div>
@@ -208,31 +206,57 @@ const AboutSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.05 }}
           >
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-semibold mb-8 text-foreground text-center"
-            >
-              Core Expertise
-            </motion.h3>
-            <div className="grid gap-6">
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h3 className="text-4xl font-bold mb-4 gradient-text">
+                CORE EXPERTISE
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-ai-cyan to-ai-purple mx-auto rounded-full"></div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {expertiseAreas.map((area, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.2 }}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -8,
+                    rotateX: 5,
+                    transition: { duration: 0.3, ease: "easeOut" }
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group cursor-pointer"
                 >
-                  <Card className="glass-card hover-lift border-0">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className={`p-3 rounded-xl ${area.bgColor}`}>
-                          <area.icon className={`h-6 w-6 ${area.color}`} />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-xl font-semibold mb-2 text-foreground">
+                  <Card className="glass-card border-0 overflow-hidden relative bg-gradient-to-br from-background/50 to-secondary/20 hover:from-background/70 hover:to-secondary/30 transition-all duration-500 backdrop-blur-xl">
+                    {/* Animated Background Gradient */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${area.bgColor} opacity-20`}></div>
+                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"></div>
+                    </div>
+
+                    {/* Glow Effect */}
+                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${area.bgColor} rounded-xl opacity-0 group-hover:opacity-30 blur transition-opacity duration-500`}></div>
+
+                    <CardContent className="p-8 relative z-10">
+                      <div className="flex flex-col items-center text-center space-y-6">
+                        {/* Icon Container with Enhanced Animation */}
+                        <motion.div
+                          className={`relative p-6 rounded-2xl ${area.bgColor} group-hover:scale-110 transition-transform duration-300`}
+                          whileHover={{ rotate: 360 }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
+                        >
+                          <area.icon className={`h-8 w-8 ${area.color} transition-colors duration-300`} />
+
+                          {/* Pulsing Ring */}
+                          <div className={`absolute inset-0 rounded-2xl border-2 ${area.bgColor} opacity-0 group-hover:opacity-50 animate-ping`}></div>
+                        </motion.div>
+
+                        {/* Content */}
+                        <div className="space-y-3">
+                          <h4 className="text-2xl font-bold text-foreground transition-colors duration-300">
                             {area.title}
                           </h4>
-                          <p className="text-muted-foreground leading-relaxed">
+                          <p className="text-muted-foreground leading-relaxed transition-colors duration-300">
                             {area.description}
                           </p>
                         </div>

@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, FileText, MapPin, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, MapPin } from 'lucide-react';
 
 export interface ContactInfo {
   icon: typeof Mail;
@@ -12,7 +12,6 @@ export interface ContactInfo {
 export interface SocialLink {
   icon: typeof Github;
   name: string;
-  username: string;
   url: string;
   description: string;
   color: string;
@@ -48,7 +47,6 @@ export const socialLinks: SocialLink[] = [
   {
     icon: Github,
     name: "GitHub",
-    username: "Fizza Raza",
     url: 'https://github.com/FizzaRaza97',
     description: "View my code repositories and projects",
     color: "hover:text-gray-400",
@@ -56,8 +54,7 @@ export const socialLinks: SocialLink[] = [
   {
     icon: Linkedin,
     name: "LinkedIn",
-    username: "Fizza Raza",
-    url: "https://linkedin.com/in/fizzazafar",
+    url: "https://www.linkedin.com/in/fizzaraza12",
     description: "Connect with me professionally",
     color: "hover:text-blue-400",
   },
@@ -72,14 +69,5 @@ export const quickActions: QuickAction[] = [
       // In a real app, this would download the actual resume
       window.open('/resume.pdf', '_blank');
     },
-  },
-  {
-    title: "Schedule Meeting",
-    description: "Book a time to discuss opportunities",
-    icon: Calendar,
-    action: () => {
-      // In a real app, this would open a calendar booking link
-      window.open('https://calendly.com/fizzazafar', '_blank');
-    },
-  },
+  }
 ];

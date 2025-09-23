@@ -29,7 +29,6 @@ const ProjectsSection: React.FC = () => {
     },
   };
 
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-background to-secondary/10">
       <div className="w-full px-6 lg:px-8">
@@ -44,11 +43,11 @@ const ProjectsSection: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 gradient-text"
           >
-            Projects
+            PROJECTS
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="text-2xl text-muted-foreground max-w-6xl mx-auto leading-relaxed"
           >
             Explore my portfolio of machine learning projects, AI applications,
             and research contributions that demonstrate real-world impact.
@@ -70,11 +69,11 @@ const ProjectsSection: React.FC = () => {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className={`glass-card hover-lift ${project.color} border-2 h-full`}>
+              <Card className={`glass-card hover-lift border-2 h-full`}>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl ${project.bgColor}`}>
-                      <project.icon className={`h-6 w-6 ${project.color.replace('border-', 'text-')}`} />
+                    <div className={`p-3 rounded-xl bg-ai-purple/10`}>
+                      <project.icon className={`h-6 w-6 text-ai-purple`} />
                     </div>
                     <span className="text-sm font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                       {project.category}
@@ -109,8 +108,8 @@ const ProjectsSection: React.FC = () => {
                     <div className="grid grid-cols-3 gap-2">
                       {project.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className="text-center p-2 bg-secondary/50 rounded-lg">
-                          <div className="text-sm font-semibold text-ai-cyan">{metric.value}</div>
                           <div className="text-xs text-muted-foreground">{metric.label}</div>
+                          <div className="text-sm font-semibold text-cyan-600">{metric.value}</div>
                         </div>
                       ))}
                     </div>
@@ -119,7 +118,7 @@ const ProjectsSection: React.FC = () => {
                   {/* Impact */}
                   <div className="mb-6 p-3 bg-gradient-to-r from-ai-cyan/10 to-ai-purple/10 rounded-lg">
                     <p className="text-sm font-medium text-foreground">
-                      <span className="text-ai-cyan">Impact:</span> {project.impact}
+                      <span className="text-cyan-600">Impact:</span> {project.impact}
                     </p>
                   </div>
 

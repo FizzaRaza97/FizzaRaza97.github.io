@@ -16,7 +16,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
