@@ -60,6 +60,7 @@ const AboutSection: React.FC = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
+      lineHeight: 1.5,
       opacity: 1,
       y: 0,
       transition: {
