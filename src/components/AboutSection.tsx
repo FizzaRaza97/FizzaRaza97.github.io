@@ -143,35 +143,15 @@ const AboutSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Image Placeholder */}
-              <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-ai-cyan/20 via-ai-purple/20 to-ai-teal/20 border-2 border-ai-cyan/30 flex items-center justify-center relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-4 left-4 w-16 h-16 bg-ai-cyan/30 rounded-full blur-xl"></div>
-                  <div className="absolute bottom-4 right-4 w-20 h-20 bg-ai-purple/30 rounded-full blur-xl"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-ai-teal/30 rounded-full blur-xl"></div>
-                </div>
+              {/* Profile Image */}
+              <div className="w-80 h-80 rounded-2xl relative overflow-hidden group">
+                {/* Main Image */}
+                <img
+                  src="/headshot.jpeg"
+                  alt="Fizza Raza - AI Researcher & Data Scientist"
+                  className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110"
+                />
 
-                {/* Image Upload Area */}
-                <div className="text-center z-10">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-secondary/50 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">Profile Image</p>
-                  <p className="text-xs text-muted-foreground/70">Upload your photo here</p>
-                </div>
-
-                {/* Upload Overlay */}
-                <div className="absolute inset-0 bg-white/0 hover:bg-white/10 transition-colors duration-300 rounded-2xl flex items-center justify-center opacity-0 hover:opacity-100">
-                  <div className="text-center">
-                    <svg className="w-8 h-8 text-foreground mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                    </svg>
-                    <p className="text-foreground text-sm font-medium">Click to Upload</p>
-                  </div>
-                </div>
               </div>
 
               {/* Decorative Elements */}
